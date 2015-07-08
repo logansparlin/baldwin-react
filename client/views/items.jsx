@@ -2,8 +2,7 @@ Items = React.createClass({
 	mixins: [ReactMeteorData, React.Animate],
     getInitialState: function() {
 			return {
-				parent_id: this.props.section,
-                loaded: false
+				parent_id: this.props.section
 			}
 	},
 
@@ -19,23 +18,12 @@ Items = React.createClass({
         return nextProps.section !== this.props.section
     },
 
-    componentWillReceiveProps(nextProps) {
-            console.log('will receive props')
-            var that = this;
-            // TweenMax.staggerFromTo($('.product'), 0.5, {opacity: 1}, {opacity: 0, autoRound: false}, 0.05, updateData)
-            updateData()
-            function updateData() {
-                that.setState({parent_id: that.props.section})
-                console.log(that.state.parent_id)
-            }
-    },
-
-    componentWillUpdate(nextProps) {
-        console.log('will update')
+    componentWillUpdate() {
+        this.setState({parent_id: this.props.section, loading: false})
     },
 
     componentDidUpdate(prevProps) {
-        console.log('updated')
+        // console.log('updated')
         TweenMax.staggerFromTo($('.product'), 0.7, {y: 15, opacity: 0}, {y:0, opacity: 1, autoRound: false, force3D: true, ease: Back.easeOut}, 0.07, resetStyle)
         function resetStyle() {
             $('.product').css('transform', 'none')

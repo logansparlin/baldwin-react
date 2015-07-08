@@ -33,7 +33,7 @@ Nav = React.createClass({
 			        })}
 		        </div>
 
-				<Items section={this.state.parent_id}/>
+				<Items key="items" section={this.state.parent_id}/>
 
 			</div>
 		)
@@ -51,15 +51,9 @@ var styles = {
 		cursor: 'pointer',
 		textAlign: 'center',
 		padding: '20px 0',
-		backgroundColor: '#333',
-        ':hover': {
-            backgroundColor: '#444'
-        }
+		backgroundColor: '#333'
     },
 	active: {
-		backgroundColor: 'red',
-		':hover': {
-			backgroundColor: 'red'
-		}
+		backgroundColor: 'red'
 	}
 }
