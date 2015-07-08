@@ -21,6 +21,7 @@ if(Meteor.isServer) {
 				"mens",
 				"hats"
 			],
+			"price":"45.00",
 			"parent_ref":"bdwn1"
 		});
 		Products.insert({
@@ -30,6 +31,7 @@ if(Meteor.isServer) {
 				"mens",
 				"hats"
 			],
+			"price":"45.00",
 			"parent_ref":"bdwn1"
 		});
 		Products.insert({
@@ -39,6 +41,7 @@ if(Meteor.isServer) {
 				"mens",
 				"hats"
 			],
+			"price":"45.00",
 			"parent_ref":"bdwn1"
 		});
 		Products.insert({
@@ -48,6 +51,27 @@ if(Meteor.isServer) {
 				"mens",
 				"hats"
 			],
+			"price":"45.00",
+			"parent_ref":"bdwn1"
+		});
+		Products.insert({
+			"title":"Heather Grey Logo Hat",
+			"slug":"heather-grey-logo-hat",
+			"categories": [
+				"mens",
+				"hats"
+			],
+			"price":"45.00",
+			"parent_ref":"bdwn1"
+		});
+		Products.insert({
+			"title":"Heather Grey Logo Hat",
+			"slug":"heather-grey-logo-hat",
+			"categories": [
+				"mens",
+				"hats"
+			],
+			"price":"45.00",
 			"parent_ref":"bdwn1"
 		});
 		Products.insert({
@@ -58,6 +82,7 @@ if(Meteor.isServer) {
 				"womens",
 				"hats"
 			],
+			"price": "52.00",
 			"parent_ref":"bdwn2"
 		});
 		Products.insert({
@@ -68,6 +93,7 @@ if(Meteor.isServer) {
 				"womens",
 				"hats"
 			],
+			"price": "52.00",
 			"parent_ref":"bdwn2"
 		});
 		Products.insert({
@@ -78,6 +104,7 @@ if(Meteor.isServer) {
 				"womens",
 				"hats"
 			],
+			"price": "52.00",
 			"parent_ref":"bdwn2"
 		});
 		Products.insert({
@@ -88,6 +115,29 @@ if(Meteor.isServer) {
 				"womens",
 				"hats"
 			],
+			"price": "52.00",
+			"parent_ref":"bdwn2"
+		});
+		Products.insert({
+			"title":"Navy Blue Logo Hat",
+			"slug":"navy-blue-logo-hat",
+			"categories": [
+				"mens",
+				"womens",
+				"hats"
+			],
+			"price": "52.00",
+			"parent_ref":"bdwn2"
+		});
+		Products.insert({
+			"title":"Navy Blue Logo Hat",
+			"slug":"navy-blue-logo-hat",
+			"categories": [
+				"mens",
+				"womens",
+				"hats"
+			],
+			"price": "52.00",
 			"parent_ref":"bdwn2"
 		});
 	}
