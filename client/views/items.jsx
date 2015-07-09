@@ -1,25 +1,16 @@
 Items = React.createClass({
 	mixins: [ReactMeteorData, React.Animate],
-    getInitialState: function() {
-			return {
-				parent_id: this.props.section
-			}
-	},
 
 	getMeteorData() {
       var products = Meteor.subscribe('products');
       return {
 		productsLoading: ! products.ready(),
-		products: Products.find({parent_ref: this.state.parent_id}).fetch()
+		products: Products.find({parent_ref: this.props.section}).fetch(),
       }
 	},
 
     shouldComponentUpdate(nextProps) {
         return nextProps.section !== this.props.section
-    },
-
-    componentWillUpdate() {
-        this.setState({parent_id: this.props.section, loading: false})
     },
 
     componentDidUpdate(prevProps) {
